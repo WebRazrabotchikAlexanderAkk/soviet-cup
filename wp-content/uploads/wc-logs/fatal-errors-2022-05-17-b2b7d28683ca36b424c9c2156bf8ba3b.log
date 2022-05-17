@@ -1,0 +1,38 @@
+2022-05-17T06:14:56+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\OpenServer\domains\soviet-cup\wp-content\themes\new\header.php:11
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(770): require_once()
+#1 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(716): load_template()
+#2 C:\OpenServer\domains\soviet-cup\wp-includes\general-template.php(48): locate_template()
+#3 C:\OpenServer\domains\soviet-cup\wp-content\themes\new\home.php(7): get_header()
+#4 C:\OpenServer\domains\soviet-cup\wp-includes\template-loader.php(106): include('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\soviet-cup\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#6 C:\OpenServer\domains\soviet-cup\index.php(17): require('C:\\OpenServer\\d...')
+#7 {main}
+  thrown в C:\OpenServer\domains\soviet-cup\wp-content\themes\new\header.php на строке 11
+
+2022-05-17T06:14:56+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\OpenServer\domains\soviet-cup\wp-content\themes\new\header.php:11
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(770): require_once()
+#1 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(716): load_template()
+#2 C:\OpenServer\domains\soviet-cup\wp-includes\general-template.php(48): locate_template()
+#3 C:\OpenServer\domains\soviet-cup\wp-content\themes\new\index.php(1): get_header()
+#4 C:\OpenServer\domains\soviet-cup\wp-includes\template-loader.php(106): include('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\soviet-cup\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#6 C:\OpenServer\domains\soviet-cup\index.php(17): require('C:\\OpenServer\\d...')
+#7 {main}
+  thrown в C:\OpenServer\domains\soviet-cup\wp-content\themes\new\header.php на строке 11
+
+2022-05-17T06:15:20+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\OpenServer\domains\soviet-cup\wp-content\themes\new\header.php:11
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(770): require_once()
+#1 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(716): load_template()
+#2 C:\OpenServer\domains\soviet-cup\wp-includes\general-template.php(48): locate_template()
+#3 C:\OpenServer\domains\soviet-cup\wp-content\themes\new\home.php(7): get_header()
+#4 C:\OpenServer\domains\soviet-cup\wp-includes\template-loader.php(106): include('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\soviet-cup\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#6 C:\OpenServer\domains\soviet-cup\index.php(17): require('C:\\OpenServer\\d...')
+#7 {main}
+  thrown в C:\OpenServer\domains\soviet-cup\wp-content\themes\new\header.php на строке 11
+
+2022-05-17T17:28:59+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в C:\OpenServer\domains\soviet-cup\wp-includes\Requests\Transport\cURL.php на строке 484
+
