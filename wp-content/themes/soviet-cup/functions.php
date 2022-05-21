@@ -34,6 +34,43 @@ add_action('after_setup_theme', function () {
     ]);
 });
 
+// Хлебные крошки
+function the_breadcrumb() {
+    echo '<div id="breadcrumb"><ul><li><a href="/">Главная</a></li><li></li>';
+    if ( is_category() || is_single() ) {
+        $cats = get_the_category();
+        $cat = $cats[0];
+        echo '<li><a href="'.get_category_link($cat->term_id).'">'.$cat->name.'</a></li><li></li>';
+    }
+    if(is_single()){
+        echo '<li>';
+        the_title();
+        echo '</li>';
+    }
+    if(is_page()){
+        echo '<li>';
+        the_title();
+        echo '</li>';
+    }
+    echo '</ul><div class="clear"></div></div>';
+}
+
+// Ссылки на пост
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+function new_excerpt_more( $more ){
+	global $post;
+	return '<a href="'. get_permalink($post) . '">Подробнее</a>';
+}
+// Количество слов в превью поста
+add_filter( 'excerpt_length', function(){
+	return 40;
+} );
+// Окончание слов в превью поста
+add_filter( 'excerpt_more', function( $more ) {
+	return '...';
+} );
+
+
 # Добавляет SVG в список разрешенных для загрузки файлов.
 function svg_upload_allow($mimes)
 {

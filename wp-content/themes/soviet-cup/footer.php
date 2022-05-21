@@ -9,17 +9,11 @@
 					<?php the_custom_logo(); ?>
 							</div>
 							<div class="contacts-footer__item">
-								<a href="tel:84951232323" class="contacts-footer__link icon-tel">
-									<svg class="inline-svg-icon" width="20" height="20">
-										<use xlink:href="<?php bloginfo('template_url');?>/assets/img/svg-sprite.svg#tel"></use>
-									</svg>
+								<a href="tel:84951232323" class="contacts-footer__link icon-phone-call">
 									8 (495) 123 23 23</a>
 							</div>
 							<div class="contacts-footer__item">
 								<a href="mailto:info@sitedom.ru" class="contacts-footer__link icon-mail">
-									<svg class="inline-svg-icon" width="20" height="16">
-										<use xlink:href="<?php bloginfo('template_url');?>/assets/img/svg-sprite.svg#mail"></use>
-									</svg>
 									info@sitedom.ru</a>
 							</div>
 						</div>
@@ -38,23 +32,19 @@
 								</ul>
 							</div>
 							<div class="menu-footer__item">
-								<h4 class="menu-footer__name">Продукция</h4>
+								<h4 class="menu-footer__name">Информация</h4>
 								<ul class="menu-footer__list">
-									<li><a href="">Серия</a></li>
-									<li><a href="">Серия</a></li>
-									<li><a href="">Серия</a></li>
-									<li><a href="">Серия</a></li>
-									<li><a href="">Серия</a></li>
+									<li><a href="">Акции</a></li>
+									<li><a href="">Доставка</a></li>
+									<li><a href="">Политика возврата</a></li>
 								</ul>
 							</div>
 							<div class="menu-footer__item">
-								<h4 class="menu-footer__name">Продукция</h4>
+								<h4 class="menu-footer__name">Компания</h4>
 								<ul class="menu-footer__list">
-									<li><a href="">Серия</a></li>
-									<li><a href="">Серия</a></li>
-									<li><a href="">Серия</a></li>
-									<li><a href="">Серия</a></li>
-									<li><a href="">Серия</a></li>
+									<li><a href="">О нас</a></li>
+									<li><a href="">Юридическая информация</a></li>
+									<li><a href="">Контакты</a></li>
 								</ul>
 							</div>
 						</div>

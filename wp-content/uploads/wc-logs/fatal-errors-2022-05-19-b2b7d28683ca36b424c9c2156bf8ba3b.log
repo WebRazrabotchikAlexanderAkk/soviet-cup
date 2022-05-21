@@ -1,0 +1,9 @@
+2022-05-19T05:02:42+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_cat_name(), 0 passed in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\category-compotes.php on line 33 and exactly 1 expected in C:\OpenServer\domains\soviet-cup\wp-includes\category.php:223
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\category-compotes.php(33): get_cat_name()
+#1 C:\OpenServer\domains\soviet-cup\wp-includes\template-loader.php(106): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\soviet-cup\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#3 C:\OpenServer\domains\soviet-cup\index.php(17): require('C:\\OpenServer\\d...')
+#4 {main}
+  thrown в C:\OpenServer\domains\soviet-cup\wp-includes\category.php на строке 223
+
