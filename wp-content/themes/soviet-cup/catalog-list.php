@@ -16,7 +16,7 @@ Template Name: list
 			<?php the_breadcrumb(); ?>
 
 			<!-- Заголовок категории -->
-			<h1 class="catalog__title">Компоты A CUP FOR YOU</h1>
+			<h1 class="page__title catalog__title">Компоты A CUP FOR YOU</h1>
 			<!-- Сколько товаров в категории -->
 			<span class="catalog__quantity-products">
 				<?php $category_uid = get_queried_object();

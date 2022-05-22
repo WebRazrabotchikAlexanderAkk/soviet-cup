@@ -112,14 +112,14 @@
 					<!-- Действия -->
 					<div class="header__actions actions-header" data-da=".header__menu,991.98,0">
 						<!-- Аккаунт -->
-						<a href="me-accaunt.html" class="actions-header__icon">
+						<a href="http://soviet-cup/account/" class="actions-header__icon">
 							<svg class="inline-svg-icon" width="20" height="20">
 								<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/svg-sprite.svg#user"></use>
 							</svg>
 						</a>
 
 						<!-- Избранное -->
-						<a href="favorite.html" class="actions-header__icon">
+						<a href="http://soviet-cup/favorite/" class="actions-header__icon">
 							<svg class="inline-svg-icon" width="20" height="20">
 								<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/svg-sprite.svg#favorite"></use>
 							</svg>
@@ -127,7 +127,7 @@
 
 						<!-- Корзина -->
 						<div class="actions-header__item cart-header">
-							<a href="cart.html" class="actions-header__icon">
+							<a href="http://soviet-cup/cart/" class="actions-header__icon">
 								<svg class="inline-svg-icon" width="20" height="20">
 									<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/svg-sprite.svg#bag"></use>
 								</svg>

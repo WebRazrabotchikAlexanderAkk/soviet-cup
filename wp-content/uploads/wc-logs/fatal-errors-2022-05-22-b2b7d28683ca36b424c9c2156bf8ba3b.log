@@ -1,0 +1,12 @@
+2022-05-22T15:56:46+00:00 CRITICAL syntax error, unexpected ';', expecting ')' в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\functions.php на строке 9
+
+2022-05-22T16:36:48+00:00 CRITICAL syntax error, unexpected 'template_url' (T_STRING), expecting ')' в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\cart-me.php на строке 62
+
+2022-05-22T18:38:56+00:00 CRITICAL Uncaught Error: Call to a member function get_min_purchase_quantity() on null in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\cart-me.php:100
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-includes\template-loader.php(106): include()
+#1 C:\OpenServer\domains\soviet-cup\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\soviet-cup\index.php(17): require('C:\\OpenServer\\d...')
+#3 {main}
+  thrown в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\cart-me.php на строке 100
+

@@ -24,7 +24,7 @@ Template Name: home
 			<!-- ASSORTMENT -->
 			<section class="page__section page__assortment assortment">
 				<div class="assortment__container">
-					<h2 class="page__title">Наша продукция</h2>
+					<h2 class="section__title">Наша продукция</h2>
 					<div class="assortment__body">
 						<div class="assortment__item">
 							<a href="/" class="assortment__image">

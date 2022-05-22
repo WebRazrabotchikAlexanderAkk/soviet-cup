@@ -18,6 +18,13 @@ add_action('wp_enqueue_scripts', function () {
         'null',
         true
     );
+    wp_enqueue_script(
+        'input-script',
+        get_template_directory_uri() . '/assets/js/input.js',
+        array(),
+        'null',
+        true
+    );
 });
 
 add_theme_support('post-thumbnails');
@@ -33,6 +40,14 @@ add_action('after_setup_theme', function () {
         'footer_menu' => 'Меню в подвале'
     ]);
 });
+
+// Тема поддерживает Woocommerce
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+add_theme_support( 'woocommerce' );
+}
+
+
 
 // Хлебные крошки
 function the_breadcrumb() {
