@@ -51,9 +51,9 @@
 												<div class="catalog-menu__body">
 													<div class="catalog-menu__body_flex">
 														<ul class="catalog-menu__list">
-															<li><a class="catalog-menu__link" href="http://soviet-cup/category/catalog/compotes/">Малина</a></li>
-															<li><a class="catalog-menu__link" href="http://soviet-cup/catalog-list/">Смородина</a></li>
-															<li><a class="catalog-menu__link" href="http://soviet-cup/catalog-grid/">Вишня</a></li>
+															<li><a class="catalog-menu__link" href="<?php get_page_link();?>category/catalog/compotes/">Малина</a></li>
+															<li><a class="catalog-menu__link" href="<?php get_page_link();?>catalog-list/">Смородина</a></li>
+															<li><a class="catalog-menu__link" href="<?php get_page_link();?>catalog-grid/">Вишня</a></li>
 														</ul>
 														<div class="catalog-menu__image">
 															<img src="<?php bloginfo('template_url'); ?>/assets/img/products/1.png" width="200" alt="">
@@ -66,7 +66,7 @@
 												<div class="catalog-menu__body">
 													<div class="catalog-menu__body_flex">
 														<ul class="catalog-menu__list">
-															<li><a class="catalog-menu__link" href="http://soviet-cup/category/catalog/compotes/">Смородина</a></li>
+															<li><a class="catalog-menu__link" href="<?php get_page_link();?>category/catalog/compotes/">Смородина</a></li>
 														</ul>
 														<div class="catalog-menu__image">
 															<img src="<?php bloginfo('template_url'); ?>/assets/img/products/2.png" width="200" alt="">
@@ -79,7 +79,7 @@
 												<div class="catalog-menu__body">
 													<div class="catalog-menu__body_flex">
 														<ul class="catalog-menu__list">
-															<li><a class="catalog-menu__link" href="http://soviet-cup/category/catalog/compotes/">Смородина</a></li>
+															<li><a class="catalog-menu__link" href="<?php get_page_link();?>category/catalog/compotes/">Смородина</a></li>
 														</ul>
 														<div class="catalog-menu__image">
 															<img src="<?php bloginfo('template_url'); ?>/assets/img/products/3.png" width="200" alt="">
@@ -112,30 +112,35 @@
 					<!-- Действия -->
 					<div class="header__actions actions-header" data-da=".header__menu,991.98,0">
 						<!-- Аккаунт -->
-						<a href="http://soviet-cup/account/" class="actions-header__icon">
+						<a href="<?php get_page_link();?>my-account/" class="actions-header__icon">
 							<svg class="inline-svg-icon" width="20" height="20">
 								<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/svg-sprite.svg#user"></use>
 							</svg>
 						</a>
 
 						<!-- Избранное -->
-						<a href="http://soviet-cup/favorite/" class="actions-header__icon">
+						<a href="<?php get_page_link();?>favorite/" class="actions-header__icon">
 							<svg class="inline-svg-icon" width="20" height="20">
 								<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/svg-sprite.svg#favorite"></use>
 							</svg>
+							<span class="quantity">
+								<?php global $wishlist_count;
+								echo $wishlist_count = YITH_WCWL()->count_products(); ?>
+								</span>
 						</a>
 
 						<!-- Корзина -->
 						<div class="actions-header__item cart-header">
-							<a href="http://soviet-cup/cart/" class="actions-header__icon">
+							<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="actions-header__icon">
 								<svg class="inline-svg-icon" width="20" height="20">
 									<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/svg-sprite.svg#bag"></use>
 								</svg>
-								<span class="quantity">2</span>
+								<span class="quantity"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+								
 							</a>
 							<div class="cart-header__left">
 								<p class="cart-header__name">Корзина:</p>
-								<p class="cart-header__price">210 900 ₽</p>
+								<p class="cart-header__price"><?php echo WC()->cart->get_cart_subtotal(); ?></p>
 							</div>
 						</div>
 					</div>

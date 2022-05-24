@@ -13,16 +13,17 @@ Template Name: favorite
 			<div class="page__cart cart">
 				<div class="cart__container">								
 				<?php the_breadcrumb(); ?>
-					<h1 class="cart__title page__title">Избранное</h1>
+					<!-- <h1 class="cart__title page__title">Избранное</h1> -->
 					<div class="cart__body">
-						<!-- Избранное пусто -->
+					<?php echo do_shortcode('[yith_wcwl_wishlist]'); ?>
+						<!-- Избранное пусто
 						<div class="null-cart">
 							<h2 class="null-cart__title">Здесь ничего нет. Ваш список избранного пуст</h2>
 							<div class="page__center">
 								<a href="#" class="button button_green_two">Посмотреть товары</a>
 							</div>
-						</div>
-						<!-- В избранном что-то есть -->
+						</div> -->
+						<!-- В избранном что-то есть
 						<div class="main-cart favorite">
 							<ul class="favorite__list">
 								<li class="favorite__item">
@@ -67,7 +68,7 @@ Template Name: favorite
 								<a href="cart.html" class="button button_green_border">Перейти в
 									корзину</a>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>

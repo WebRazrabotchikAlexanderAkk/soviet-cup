@@ -25,22 +25,9 @@ Template Name: home
 			<section class="page__section page__assortment assortment">
 				<div class="assortment__container">
 					<h2 class="section__title">Наша продукция</h2>
-					<div class="assortment__body">
-						<div class="assortment__item">
-							<a href="/" class="assortment__image">
-								<img src="<?php bloginfo('template_url');?>/assets/img/products/1.png" width="200" alt="">
-							</a>
-							<a href="/" class="assortment__brand">Cup for you</a>
-							<a href="/" class="assortment__category">Компоты</a>
-						</div>
-						<div class="assortment__item">
-							<a href="/" class="assortment__image">
-								<img src="<?php bloginfo('template_url');?>/assets/img/products/2.png" width="200" alt="">
-							</a>
-							<a href="/" class="assortment__brand">Cup for you</a>
-							<a href="/" class="assortment__category">Морсы</a>
-						</div>
-					</div>
+					
+					<!-- Вывод категорий -->
+					<?php require_once 'category-list.php'; ?>
 				</div>
 			</section>
 			<!-- ASSORTMENT -->
@@ -54,9 +41,8 @@ Template Name: home
 					</div>
 					<div class="section__body product catalog__product_grid">
 						
-
-					<?php require_once 'product-1.php'; ?>
-
+					<?php echo do_shortcode('[recent_products]'); ?>
+					<?php // require_once 'product-1.php'; ?>
 					
 				</div>
 			</section>
@@ -75,7 +61,9 @@ Template Name: home
 						<h3>Хиты продаж</h3>
 						<span></span>
 					</div>
-					<div class="section__body"></div>
+					<div class="section__body">
+					<?php echo do_shortcode('[best_selling_products]'); ?>
+					</div>
 				</div>
 			</section>
 			<!-- HIT -->
@@ -87,7 +75,9 @@ Template Name: home
 						<h3>Рекомендуем</h3>
 						<span></span>
 					</div>
-					<div class="section__body"></div>
+					<div class="section__body">
+					<?php echo do_shortcode('[featured_products]'); ?>
+					</div>
 				</div>
 			</section>
 			<!-- RECOMMEND -->

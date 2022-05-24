@@ -15,6 +15,9 @@
  * @version 3.6.0
  */
 
+ // Счетчик просмотров
+ setPostViews(get_the_ID()); 
+
 defined( 'ABSPATH' ) || exit;
 
 global $product;
@@ -32,6 +35,30 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+
+<!-- // Название товара -->
+<?php
+the_title( '<h1 class="product__title page__title entry-title">', '</h1>' );
+?>
+
+<!-- Артикл товара -->
+<div class="product_meta">
+
+	<?php do_action( 'woocommerce_product_meta_start' ); ?>
+
+	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
+
+		<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
+
+	<?php endif; ?>
+
+	<?php // echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+
+	<?php // echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+
+	<?php do_action( 'woocommerce_product_meta_end' ); ?>
+
+</div>
 
 	<?php
 	/**
@@ -58,6 +85,8 @@ if ( post_password_required() ) {
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
 		do_action( 'woocommerce_single_product_summary' );
+
+
 		?>
 	</div>
 

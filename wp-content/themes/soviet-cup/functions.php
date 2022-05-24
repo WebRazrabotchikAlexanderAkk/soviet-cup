@@ -18,13 +18,6 @@ add_action('wp_enqueue_scripts', function () {
         'null',
         true
     );
-    wp_enqueue_script(
-        'input-script',
-        get_template_directory_uri() . '/assets/js/input.js',
-        array(),
-        'null',
-        true
-    );
 });
 
 add_theme_support('post-thumbnails');
@@ -47,7 +40,23 @@ function woocommerce_support() {
 add_theme_support( 'woocommerce' );
 }
 
+// Стрелочки в слайдере товара
+add_filter( 'woocommerce_single_product_carousel_options', 'truemisha_product_gallery_arrows' );
+ 
+function truemisha_product_gallery_arrows( $options ) {
+ 
+	$options[ 'directionNav' ] = true;
+	return $options;
+ 
+}
 
+/**Добавляем поддержку галереи Woocommerce**/
+add_action( 'after_setup_theme', 'yourtheme_setup' );
+function yourtheme_setup() {
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+}
 
 // Хлебные крошки
 function the_breadcrumb() {
@@ -69,6 +78,38 @@ function the_breadcrumb() {
     }
     echo '</ul><div class="clear"></div></div>';
 }
+
+// Счетчик просмотров
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 просмотров";
+    }
+    return $count.' просмотров';
+}
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+
+/*** уберёт на всех картинках - Убираем значок "распродажа" со страниц ***/
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
+
+add_filter( 'woocommerce_sale_flash', '__return_null' );
+	/*** Убираем значок "распродажа" со страниц ***/
+ 
 
 // Ссылки на пост
 add_filter( 'excerpt_more', 'new_excerpt_more' );

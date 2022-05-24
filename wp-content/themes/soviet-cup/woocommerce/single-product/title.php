@@ -19,4 +19,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-the_title( '<h1 class="product_title entry-title">', '</h1>' );
+
+global $product;
+?>
+
+
+<div class="product__group">
+	<div class="product__row">
+		<!-- Отзывы -->
+		<?php
+	if ( ! wc_review_ratings_enabled() ) {
+	return;
+}
+$rating_count = $product->get_rating_count();
+$review_count = $product->get_review_count();
+$average      = $product->get_average_rating();
+ ?>
+	<div class="product__rating">
+		<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
+		<?php if ( comments_open() ) : ?>
+			<?php //phpcs:disable ?>
+			<a href="#reviews" class="woocommerce-review-link" rel="nofollow"><?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="product__reviews">' . esc_html( $review_count ) . '</span>' ); ?></a>
+			<?php // phpcs:enable ?>
+		<?php endif ?>
+	</div>
+
+		<!-- Счетчик просмотров -->
+		<div class="product__views icon-visibility">
+		<?php echo getPostViews(get_the_ID()); ?>
+		</div>
+
+		<div class="product__actions">
+			<!-- Шорткод В избранное -->
+			<?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?>
+		</div>
+	</div>
+</div>

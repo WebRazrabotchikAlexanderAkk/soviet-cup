@@ -2,21 +2,6 @@
 /*
 Template Name: cart
  */
-/**
- * Cart Page
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
- * @version 3.8.0
- */
 ?>
 
 <?php get_header();?>
@@ -130,7 +115,7 @@ do_action('woocommerce_before_cart');?>
 									'woocommerce_cart_item_remove_link',
 									sprintf(
 										'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><svg class="inline-svg-icon" width="13" height="13">
-																<use xlink:href="http://soviet-cup/wp-content/themes/soviet-cup/assets/img/svg-sprite.svg#delete"></use>
+																<use xlink:href="https://shablons.test-handyhost.ru/freelance/wp/wp-content/themes/soviet-cup/assets/img/svg-sprite.svg#delete"></use>
 															</svg></a>',
 										esc_url(wc_get_cart_remove_url($cart_item_key)),
 										esc_html__('Remove this item', 'woocommerce'),
