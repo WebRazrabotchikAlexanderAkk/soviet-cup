@@ -10,7 +10,6 @@ Template Name:my-account
 			<!-- Account -->
 			<div class="page__cart cart">
 				<div class="cart__container">
-					<?php the_breadcrumb();?>
 					<div class="cart__body">
 
 <?php

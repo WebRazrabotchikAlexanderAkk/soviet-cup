@@ -24,8 +24,7 @@ Template Name: home
 			<!-- ASSORTMENT -->
 			<section class="page__section page__assortment assortment">
 				<div class="assortment__container">
-					<h2 class="section__title">Наша продукция</h2>
-					
+					<h2 class="section__title">Наша продукция</h2>					
 					<!-- Вывод категорий -->
 					<?php require_once 'category-list.php'; ?>
 				</div>

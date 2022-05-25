@@ -1,8 +1,3 @@
-<?php
-/*
-Template Name: grid
- */
-?>
 
 <!-- функция вывода шапки -->
 <?php get_header(); ?>

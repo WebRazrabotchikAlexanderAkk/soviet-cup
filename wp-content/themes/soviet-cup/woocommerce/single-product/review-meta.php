@@ -30,16 +30,26 @@ if ( '0' === $comment->comment_approved ) { ?>
 
 <?php } else { ?>
 
-	<p class="meta">
-		<strong class="woocommerce-review__author"><?php comment_author(); ?> </strong>
+	<div class="meta">
 		<?php
 		if ( 'yes' === get_option( 'woocommerce_review_rating_verification_label' ) && $verified ) {
 			echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'woocommerce' ) . ')</em> ';
 		}
-
 		?>
+		
+		<div class="reviews__meta_top">
+		<?php	
+$rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
+
+if ( $rating && wc_review_ratings_enabled() ) {
+	echo wc_get_rating_html( $rating ); // WPCS: XSS ok.
+}
+?>
 		<span class="woocommerce-review__dash">&ndash;</span> <time class="woocommerce-review__published-date" datetime="<?php echo esc_attr( get_comment_date( 'c' ) ); ?>"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></time>
-	</p>
+	</div>
+</div>
+	
+		<strong class="woocommerce-review__author"><?php comment_author(); ?> </strong>
 
 	<?php
 }

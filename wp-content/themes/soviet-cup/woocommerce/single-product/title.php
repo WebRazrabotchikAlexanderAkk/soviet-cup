@@ -39,7 +39,7 @@ $average      = $product->get_average_rating();
 		<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
 		<?php if ( comments_open() ) : ?>
 			<?php //phpcs:disable ?>
-			<a href="#reviews" class="woocommerce-review-link" rel="nofollow"><?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="product__reviews">' . esc_html( $review_count ) . '</span>' ); ?></a>
+			<a href="#reviews" class="woocommerce-review-link product__reviews" rel="nofollow"><?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="product__reviews">' . esc_html( $review_count ) . '</span>' ); ?></a>
 			<?php // phpcs:enable ?>
 		<?php endif ?>
 	</div>

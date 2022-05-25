@@ -11,7 +11,8 @@ Template Name: cart
 			<!-- CART -->
 			<div class="page__cart cart">
 				<div class="cart__container">
-					<?php the_breadcrumb();?>
+	<!-- Хлебные крошки -->
+	<?php woocommerce_breadcrumb(); ?>
 					<h1 class="cart__title page__title">Корзина</h1>
 					<div class="cart__body">
 					<?php
@@ -114,9 +115,9 @@ do_action('woocommerce_before_cart');?>
 									echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 									'woocommerce_cart_item_remove_link',
 									sprintf(
-										'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><svg class="inline-svg-icon" width="13" height="13">
-																<use xlink:href="https://shablons.test-handyhost.ru/freelance/wp/wp-content/themes/soviet-cup/assets/img/svg-sprite.svg#delete"></use>
-															</svg></a>',
+										'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12.0379 9.85045C12.0379 9.59933 11.9375 9.34821 11.7567 9.16741L8.80357 6.21429L11.7567 3.26116C11.9375 3.08036 12.0379 2.82924 12.0379 2.57812C12.0379 2.32701 11.9375 2.07589 11.7567 1.89509L10.3906 0.529017C10.2098 0.348214 9.95871 0.247767 9.70759 0.247767C9.45647 0.247767 9.20536 0.348214 9.02455 0.529017L6.07143 3.48214L3.1183 0.529017C2.9375 0.348214 2.68638 0.247767 2.43527 0.247767C2.18415 0.247767 1.93304 0.348214 1.75223 0.529017L0.386161 1.89509C0.205357 2.07589 0.104911 2.32701 0.104911 2.57812C0.104911 2.82924 0.205357 3.08036 0.386161 3.26116L3.33929 6.21429L0.386161 9.16741C0.205357 9.34821 0.104911 9.59933 0.104911 9.85045C0.104911 10.1016 0.205357 10.3527 0.386161 10.5335L1.75223 11.8996C1.93304 12.0804 2.18415 12.1808 2.43527 12.1808C2.68638 12.1808 2.9375 12.0804 3.1183 11.8996L6.07143 8.94643L9.02455 11.8996C9.20536 12.0804 9.45647 12.1808 9.70759 12.1808C9.95871 12.1808 10.2098 12.0804 10.3906 11.8996L11.7567 10.5335C11.9375 10.3527 12.0379 10.1016 12.0379 9.85045Z" fill="#FF2742" fill-opacity="0.797979"/>
+										</svg></a>',
 										esc_url(wc_get_cart_remove_url($cart_item_key)),
 										esc_html__('Remove this item', 'woocommerce'),
 										esc_attr($product_id),

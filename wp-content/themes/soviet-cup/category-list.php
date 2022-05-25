@@ -15,8 +15,8 @@
 	<div class="assortment__item"> 
 
 	<a class="assortment__image" href="<?php echo get_term_link($term->term_id);?>"><?php woocommerce_subcategory_thumbnail( $term );  ?></a>
+	<div class="assortment__brand"><p><?php if($term->description) : ?><?php echo $term->description; ?><?php else: ?><?php endif; ?></p></div>
 	<h2 class="assortment__category"><a href="<?php echo get_term_link($term->term_id);?>"><?php echo $term->name;?></a></h2>
-	<!--<div class="subcategory-descripton"><p><?php //if($term->description) : ?><?php //echo $term->description; ?><?php //else: ?>Описание термина таксономии<?php //endif; ?></p></div>-->
 
 	<?php // Создаем массив терминов детей текущего термина текущей таксономии
 	$tax = $term->taxonomy;

@@ -2,8 +2,9 @@
 <?php require_once 'search.php'; ?>
 
 <main class="page page__ohra">
-	<div class="page__container">							
-		<?php the_breadcrumb(); ?>
+	<div class="page__container">
+	<!-- Хлебные крошки -->
+	<?php woocommerce_breadcrumb(); ?>
 			<div class="woocommerce">
 				<?php if(function_exists('woocommerce_content')) { woocommerce_content(); } ?>
 			</div>

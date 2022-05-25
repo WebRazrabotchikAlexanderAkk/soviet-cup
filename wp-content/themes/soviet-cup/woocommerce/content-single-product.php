@@ -41,24 +41,16 @@ if ( post_password_required() ) {
 the_title( '<h1 class="product__title page__title entry-title">', '</h1>' );
 ?>
 
-<!-- Артикл товара -->
-<div class="product_meta">
 
-	<?php do_action( 'woocommerce_product_meta_start' ); ?>
+<?php // ID товара
+add_action( 'woocommerce_before_single_product_summary', 'cusom_woo_info_1', 10 );
+function cusom_woo_info_1() {
+    global $post;
+    echo '<span class="sku_wrapper"><span class="sku">ID: ' . $post->ID . '</span>
+</span>';
+}
+?>
 
-	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
-
-		<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
-
-	<?php endif; ?>
-
-	<?php // echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
-
-	<?php // echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
-
-	<?php do_action( 'woocommerce_product_meta_end' ); ?>
-
-</div>
 
 	<?php
 	/**

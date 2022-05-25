@@ -1,0 +1,71 @@
+2022-05-25T06:08:56+00:00 CRITICAL Cannot redeclare storm_show_product_cat() (previously declared in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-product.php:48) в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-product.php на строке 47
+
+2022-05-25T08:56:16+00:00 CRITICAL Cannot redeclare woocommerce_taxonomy_archive_description() (previously declared in C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-template-functions.php:1239) в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\category-list.php на строке 3
+
+2022-05-25T09:40:12+00:00 CRITICAL Cannot redeclare storm_show_product_cat() (previously declared in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-product.php:49) в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-product.php на строке 47
+
+2022-05-25T13:42:06+00:00 CRITICAL Uncaught Error: Call to a member function get_sku() on null in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php:28
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1646): wc_get_template()
+#2 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(303): woocommerce_template_single_meta()
+#3 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters()
+#4 C:\OpenServer\domains\soviet-cup\wp-includes\plugin.php(470): WP_Hook->do_action()
+#5 C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-single-product.php(76): do_action()
+#6 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(772): require('C:\\OpenServer\\d...')
+#7 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.ph в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php на строке 28
+
+2022-05-25T13:45:45+00:00 CRITICAL Uncaught Error: Call to a member function get_sku() on null in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php:28
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1646): wc_get_template()
+#2 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(303): woocommerce_template_single_meta()
+#3 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters()
+#4 C:\OpenServer\domains\soviet-cup\wp-includes\plugin.php(470): WP_Hook->do_action()
+#5 C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-single-product.php(76): do_action()
+#6 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(772): require('C:\\OpenServer\\d...')
+#7 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.ph в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php на строке 28
+
+2022-05-25T13:46:15+00:00 CRITICAL Uncaught Error: Call to a member function get_sku() on null in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php:28
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1646): wc_get_template()
+#2 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(303): woocommerce_template_single_meta()
+#3 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters()
+#4 C:\OpenServer\domains\soviet-cup\wp-includes\plugin.php(470): WP_Hook->do_action()
+#5 C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-single-product.php(76): do_action()
+#6 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(772): require('C:\\OpenServer\\d...')
+#7 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.ph в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php на строке 28
+
+2022-05-25T13:47:49+00:00 CRITICAL Uncaught Error: Call to a member function get_sku() on null in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php:28
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1646): wc_get_template()
+#2 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(303): woocommerce_template_single_meta()
+#3 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters()
+#4 C:\OpenServer\domains\soviet-cup\wp-includes\plugin.php(470): WP_Hook->do_action()
+#5 C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-single-product.php(79): do_action()
+#6 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(772): require('C:\\OpenServer\\d...')
+#7 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.ph в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php на строке 28
+
+2022-05-25T13:49:06+00:00 CRITICAL Uncaught Error: Call to a member function get_sku() on null in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php:28
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1646): wc_get_template()
+#2 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(303): woocommerce_template_single_meta()
+#3 C:\OpenServer\domains\soviet-cup\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters()
+#4 C:\OpenServer\domains\soviet-cup\wp-includes\plugin.php(470): WP_Hook->do_action()
+#5 C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\content-single-product.php(79): do_action()
+#6 C:\OpenServer\domains\soviet-cup\wp-includes\template.php(772): require('C:\\OpenServer\\d...')
+#7 C:\OpenServer\domains\soviet-cup\wp-content\plugins\woocommerce\includes\wc-core-functions.ph в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\woocommerce\single-product\meta.php на строке 28
+
+2022-05-25T17:43:38+00:00 CRITICAL Uncaught Error: Call to undefined function the_breadcrumb() in C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\favorite.php:15
+Stack trace:
+#0 C:\OpenServer\domains\soviet-cup\wp-includes\template-loader.php(106): include()
+#1 C:\OpenServer\domains\soviet-cup\wp-blog-header.php(19): require_once('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\soviet-cup\index.php(17): require('C:\\OpenServer\\d...')
+#3 {main}
+  thrown в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\favorite.php на строке 15
+
+2022-05-25T17:50:21+00:00 CRITICAL syntax error, unexpected 'template_url' (T_STRING), expecting ')' в C:\OpenServer\domains\soviet-cup\wp-content\themes\soviet-cup\cart-me.php на строке 119
+

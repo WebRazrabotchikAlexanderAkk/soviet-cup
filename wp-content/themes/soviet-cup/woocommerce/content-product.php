@@ -33,12 +33,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_before_shop_loop_item' );
 
-	// Вывод категории в карточках товара
-// add_action( 'woocommerce_before_shop_loop_item_title', 'storm_show_product_cat', 30 );
-// function storm_show_product_cat() {
-//   global $product;
-//     echo wc_get_product_category_list( $product->get_id(), ', ', '<div class="product-cat">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</div>' ); 
-// }
 
 	/**
 	 * Hook: woocommerce_before_shop_loop_item_title.

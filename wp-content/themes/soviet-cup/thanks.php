@@ -10,8 +10,9 @@ Template Name: thanks
 <main class="page">
 			<!-- THANKS -->
 			<div class="page__thanks thanks">
-				<div class="thanks__container">				
-				<?php the_breadcrumb(); ?>
+				<div class="thanks__container">
+	<!-- Хлебные крошки -->
+	<?php woocommerce_breadcrumb(); ?>
 					<h1 class="page__title">Оплата</h1>
 					<div class="thanks__body">
 						<div class="thanks__icon">

@@ -6,7 +6,8 @@
 <main class="page">
 	<div class="page__catalog catalog">
 		<div class="catalog__container">
-			<?php the_breadcrumb(); ?>
+	<!-- Хлебные крошки -->
+	<?php woocommerce_breadcrumb(); ?>
 
 			<!-- Заголовок категории -->
 			<h1 class="page__title catalog__title">Компоты A CUP FOR YOU</h1>

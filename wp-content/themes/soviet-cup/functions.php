@@ -41,14 +41,14 @@ add_theme_support( 'woocommerce' );
 }
 
 // Стрелочки в слайдере товара
-add_filter( 'woocommerce_single_product_carousel_options', 'truemisha_product_gallery_arrows' );
+// add_filter( 'woocommerce_single_product_carousel_options', 'truemisha_product_gallery_arrows' );
  
-function truemisha_product_gallery_arrows( $options ) {
+// function truemisha_product_gallery_arrows( $options ) {
  
-	$options[ 'directionNav' ] = true;
-	return $options;
+// 	$options[ 'directionNav' ] = true;
+// 	return $options;
  
-}
+// }
 
 /**Добавляем поддержку галереи Woocommerce**/
 add_action( 'after_setup_theme', 'yourtheme_setup' );
@@ -59,24 +59,11 @@ add_theme_support( 'wc-product-gallery-slider' );
 }
 
 // Хлебные крошки
-function the_breadcrumb() {
-    echo '<div id="breadcrumb"><ul><li><a href="/">Главная</a></li><li></li>';
-    if ( is_category() || is_single() ) {
-        $cats = get_the_category();
-        $cat = $cats[0];
-        echo '<li><a href="'.get_category_link($cat->term_id).'">'.$cat->name.'</a></li><li></li>';
-    }
-    if(is_single()){
-        echo '<li>';
-        the_title();
-        echo '</li>';
-    }
-    if(is_page()){
-        echo '<li>';
-        the_title();
-        echo '</li>';
-    }
-    echo '</ul><div class="clear"></div></div>';
+add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_delimiter' );
+function wcc_change_breadcrumb_delimiter( $defaults ) {
+	// Change the breadcrumb delimeter from '/' to '>'
+	$defaults['delimiter'] = '';
+	return $defaults;
 }
 
 // Счетчик просмотров
@@ -103,13 +90,31 @@ function setPostViews($postID) {
     }
 }
 
-
-/*** уберёт на всех картинках - Убираем значок "распродажа" со страниц ***/
-remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
-
-add_filter( 'woocommerce_sale_flash', '__return_null' );
-	/*** Убираем значок "распродажа" со страниц ***/
+// Похожие товары под карточкой товара
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
+ function jk_related_products_args( $args ) {
  
+$args['posts_per_page'] = 4; // количество "Похожих товаров"
+ $args['columns'] = 4; // количество колонок
+ return $args;
+}
+
+// Переименование вкладки «Дополнительная информация» в «Характеристики»
+add_filter( 'woocommerce_product_tabs', 'devise_woo_rename_reviews_tab', 98);
+function devise_woo_rename_reviews_tab($tabs) {
+$tabs['additional_information']['title'] = 'Характеристики';
+return $tabs;
+}
+
+// Скрыть количество товаровв подкатегории
+add_filter( 'woocommerce_subcategory_count_html', 'jk_hide_category_count' );
+function jk_hide_category_count() {
+}
+function new_excerpt_length($length) {
+return 100;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
 
 // Ссылки на пост
 add_filter( 'excerpt_more', 'new_excerpt_more' );

@@ -11,8 +11,9 @@ Template Name: favorite
 <main class="page">
 			<!-- FAVORITE -->
 			<div class="page__cart cart">
-				<div class="cart__container">								
-				<?php the_breadcrumb(); ?>
+				<div class="cart__container">	
+	<!-- Хлебные крошки -->
+	<?php woocommerce_breadcrumb(); ?>
 					<!-- <h1 class="cart__title page__title">Избранное</h1> -->
 					<div class="cart__body">
 					<?php echo do_shortcode('[yith_wcwl_wishlist]'); ?>
